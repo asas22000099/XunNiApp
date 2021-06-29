@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">寻匿</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="shop_type">
+        <item>外卖</item>
+        <item>堂食</item>
+        <item>均可</item>
+    </string-array>
+
+    <string-array name="shop_label">
+        <item>早餐</item>
+        <item>早午餐</item>
+        <item>正餐</item>
+        <item>下午茶</item>
+        <item>宵夜</item>
+        <item>零食</item>
+    </string-array>
+
+    <string-array name="shop_type_search">
+        <item>外卖</item>
+        <item>堂食</item>
+        <item>均可</item>
+        <item>不限</item>
+    </string-array>
+
+    <string-array name="shop_label_search">
+        <item>早餐</item>
+        <item>早午餐</item>
+        <item>正餐</item>
+        <item>下午茶</item>
+        <item>宵夜</item>
+        <item>零食</item>
+        <item>不限</item>
+    </string-array>
+
+    <string-array name="dish_type">
+        <item>荤菜</item>
+        <item>素菜</item>
+        <item>主食</item>
+        <item>甜点</item>
+        <item>饮料</item>
+        <item>零食</item>
+    </string-array>
+
+    <string-array name="dish_has_eaten">
+        <item>吃过</item>
+        <item>没吃过</item>
+    </string-array>
+
+    <string-array name="dish_type_search">
+        <item>荤菜</item>
+        <item>素菜</item>
+        <item>主食</item>
+        <item>甜点</item>
+        <item>饮料</item>
+        <item>零食</item>
+        <item>不限</item>
+    </string-array>
+
+    <string-array name="dish_has_eaten_search">
+        <item>吃过</item>
+        <item>没吃过</item>
+        <item>不限</item>
+    </string-array>
+
+</resources>

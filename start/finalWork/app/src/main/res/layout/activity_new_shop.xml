@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewShopActivity">
+
+    <TextView
+        android:id="@+id/shopNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="店铺名称"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="名称"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shopNameLabel"
+        app:layout_constraintStart_toEndOf="@+id/shopNameLabel" />
+
+    <TextView
+        android:id="@+id/shopTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="店铺类型"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopNameLabel" />
+
+    <Spinner
+        android:id="@+id/shopTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:entries="@array/shop_type"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/shopTypeLabel"
+        app:layout_constraintTop_toTopOf="@+id/shopTypeLabel"/>
+
+    <TextView
+        android:id="@+id/shopLabelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="店铺标签"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopTypeLabel" />
+
+    <Spinner
+        android:id="@+id/shopLabelSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:entries="@array/shop_label"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/shopLabelLabel"
+        app:layout_constraintTop_toTopOf="@+id/shopLabelLabel"/>
+
+    <TextView
+        android:id="@+id/shopInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="店铺简介"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopLabelLabel" />
+
+
+    <ScrollView
+        android:id="@+id/shopInfoScroll"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/shopInfoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/shopLabelSpinner">
+
+        <EditText
+            android:id="@+id/editShopInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|top"
+            android:hint="简介"
+            android:inputType="textMultiLine" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/newShopCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="添加店铺"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/shopPictureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:text="店铺图片"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopInfoScroll" />
+
+    <Button
+        android:id="@+id/choseShopPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="选择图片"
+        app:layout_constraintBaseline_toBaselineOf="@+id/shopPictureLabel"
+        app:layout_constraintStart_toEndOf="@+id/shopPictureLabel" />
+
+    <ImageView
+        android:id="@+id/shopImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/choseShopPicture"
+        app:layout_constraintTop_toBottomOf="@+id/choseShopPicture"
+        app:srcCompat="@drawable/dish" />
+
+    <Button
+        android:id="@+id/cancelShopPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="取消选择"
+        android:clickable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/choseShopPicture"
+        app:layout_constraintStart_toEndOf="@+id/choseShopPicture" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

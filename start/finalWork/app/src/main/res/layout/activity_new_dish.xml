@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewDishActivity">
+
+    <TextView
+        android:id="@+id/dishNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="美食名称"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDishName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="名称"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dishNameLabel"
+        app:layout_constraintStart_toEndOf="@+id/dishNameLabel" />
+
+    <TextView
+        android:id="@+id/dishTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="美食类型"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dishNameLabel" />
+
+    <Spinner
+        android:id="@+id/dishTypeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:entries="@array/dish_type"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/dishTypeLabel"
+        app:layout_constraintTop_toTopOf="@+id/dishTypeLabel"/>
+
+    <TextView
+        android:id="@+id/dishEatenLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="是否吃过"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dishTypeLabel" />
+
+    <Spinner
+        android:id="@+id/dishEatenSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:entries="@array/dish_has_eaten"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toEndOf="@+id/dishEatenLabel"
+        app:layout_constraintTop_toTopOf="@+id/dishEatenLabel"/>
+
+    <TextView
+        android:id="@+id/dishInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="美食简介"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dishEatenLabel" />
+
+    <ScrollView
+        android:id="@+id/dishInfoScroll"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/dishInfoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/dishEatenSpinner">
+
+        <EditText
+            android:id="@+id/editDishInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|top"
+            android:hint="简介"
+            android:inputType="textMultiLine" />
+
+    </ScrollView>
+
+
+
+    <Button
+        android:id="@+id/newDishCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="添加美食"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dishPictureLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:text="美食图片"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dishInfoScroll" />
+
+    <Button
+        android:id="@+id/choseDishPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="选择图片"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dishPictureLabel"
+        app:layout_constraintStart_toEndOf="@+id/dishPictureLabel" />
+
+    <Button
+        android:id="@+id/cancelDishPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:text="取消选择"
+        android:clickable="false"
+        app:layout_constraintBaseline_toBaselineOf="@+id/choseDishPicture"
+        app:layout_constraintStart_toEndOf="@+id/choseDishPicture" />
+
+    <ImageView
+        android:id="@+id/dishImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/choseDishPicture"
+        app:layout_constraintTop_toBottomOf="@+id/choseDishPicture"
+        app:srcCompat="@drawable/dish" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

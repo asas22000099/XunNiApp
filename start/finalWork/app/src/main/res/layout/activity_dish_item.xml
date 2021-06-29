@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DishItemActivity">
+
+    <ImageView
+        android:layout_width = "match_parent"
+        android:layout_height = "250dp"
+        android:scaleType="center"
+        android:id="@+id/dishItemPicture"
+        android:background = "@drawable/dish"
+        android:transitionName="dishPicture"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dishItemName"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:maxLength="10"
+            android:textSize="24sp"
+            android:text="这是一个菜品的名字"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dishItemType"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/label_item"
+            android:textColor="@color/white"
+            android:text="类型"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dishItemEaten"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/dishItemType"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/label_item"
+            android:textColor="@color/white"
+            android:text="打卡"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/dishItemInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="这里是这个菜品的简介，随便写写而已。"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="15dp">
+
+        <TextView
+            android:id="@+id/enterDishItemDiary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:text="进入日记"/>
+
+        <TextView
+            android:id="@+id/changeItemEaten"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:text="打卡美食"/>
+
+        <TextView
+            android:id="@+id/modifyDishItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:text="编辑美食"/>
+
+        <TextView
+            android:id="@+id/deleteDishItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:text="删除美食"/>
+
+    </LinearLayout>
+
+</LinearLayout>
