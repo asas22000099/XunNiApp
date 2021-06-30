@@ -1,1 +1,3 @@
 # 寻匿App
+
+end文件夹中的为最后版本，想要运行直接将end文件夹中的final_work项目用Android Studio打开后运行即可
